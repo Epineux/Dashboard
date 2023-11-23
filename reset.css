@@ -64,6 +64,8 @@ a {
  color: inherit;
 }
 
-input {
+input,
+button {
  outline: none;
+ border: none;
 }
