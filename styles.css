@@ -1,8 +1,9 @@
 :root {
-  --side-color: #E29E21;
-  --main-color: #0284c7;
+  --side-color: #E69C24;
+  --main-color: #013752;
   --main-color-tint: #cdeffc;
   --neutral-color: #e6f7fd;
+  --sidebar-tint: #014567;
 }
 
 body {
@@ -21,7 +22,7 @@ body {
 }
 
 .sidebar {
-  background: linear-gradient(to right, var(--main-color), #0247C7, var(--main-color));
+  background: linear-gradient(to right, var(--main-color), var(--sidebar-tint), var(--main-color));
   color: var(--neutral-color);
   display: flex;
   flex-direction: column;
@@ -45,6 +46,10 @@ body {
   align-items: center;
 }
 
+.logo:hover {
+  cursor: pointer;
+}
+
 .user-infos {
   margin-bottom: 1.5rem;
 }
@@ -60,7 +65,7 @@ body {
   font-size: max(0.9rem, 1.4vw);
   font-weight: bolder;
   align-items: center;
-  background: linear-gradient(to right, var(--main-color), #0247C7, var(--main-color), #0247C7, var(--main-color));
+  background: linear-gradient(to right, var(--main-color), var(--sidebar-tint), var(--main-color), var(--sidebar-tint), var(--main-color));
   background-size: 200% 100%;
   transition: all 2s ease;
 }
@@ -180,13 +185,11 @@ body {
   background-position: 100%;
   color: var(--neutral-color);
   font-weight: 600;
-  transition: all 1s ease;
-  
+  transition: background-position 1s ease;
 }
 
 .user-actions > button:hover {
   cursor: pointer;
-  background-color: #02C788;
   background-position: 0;
 }
 
